@@ -12,9 +12,9 @@ public interface ApiService {
     Retrofit get annotation with our URL
     And our method that will return us the List of ContactList
     */
-    @GET("/api/values/getAll")
+    //@GET("/api/values/getAll")
 
-    //@GET("/jsonTest2.json")
+    @GET("/jsonTest.json")
 
     Call<FilmSessionList> getMyJSON();
 
