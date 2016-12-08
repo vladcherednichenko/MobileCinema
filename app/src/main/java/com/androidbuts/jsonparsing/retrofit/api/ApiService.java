@@ -1,6 +1,5 @@
 package com.androidbuts.jsonparsing.retrofit.api;
 
-import com.androidbuts.jsonparsing.model.ContactList;
 import com.androidbuts.jsonparsing.model.FilmSessionList;
 
 import retrofit2.Call;

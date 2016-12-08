@@ -5,25 +5,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.androidbuts.jsonparsing.R;
-import com.androidbuts.jsonparsing.model.Contact;
 import com.androidbuts.jsonparsing.model.Film;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class MyContactAdapter extends ArrayAdapter<Film> {
+public class CinemaAdapter extends ArrayAdapter<Film> {
 
     List<Film> filmSessionList;
     Context context;
     private LayoutInflater mInflater;
 
     // Constructors
-    public MyContactAdapter(Context context, List<Film> objects) {
+    public CinemaAdapter(Context context, List<Film> objects) {
         super(context, 0, objects);
         this.context = context;
         this.mInflater = LayoutInflater.from(context);
