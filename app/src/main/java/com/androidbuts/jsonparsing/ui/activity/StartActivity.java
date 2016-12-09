@@ -1,8 +1,12 @@
 package com.androidbuts.jsonparsing.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,6 +25,7 @@ import android.widget.Toast;
 
 import com.androidbuts.jsonparsing.R;
 import com.androidbuts.jsonparsing.adapter.CinemaAdapter;
+import com.androidbuts.jsonparsing.fragments.LoginPageFragment;
 import com.androidbuts.jsonparsing.model.Film;
 import com.androidbuts.jsonparsing.model.FilmSessionList;
 import com.androidbuts.jsonparsing.retrofit.api.ApiService;
@@ -37,6 +42,8 @@ import com.androidbuts.jsonparsing.R;
 
 public class StartActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    FragmentManager mfragment;
 
     private ListView listView;
     private View parentView;
@@ -181,21 +188,21 @@ public class StartActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        //Fragment
+        Fragment fragment = null;
 
-        if (id == R.id.log_in) {
+        if (id == R.id.nav_log_in) {
+            fragment = new LoginPageFragment();
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_log_in) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(StartActivity.this, StartActivity.class);
+            startActivity(intent);
         }
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_frame, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
