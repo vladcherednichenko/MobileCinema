@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <TextView
-        android:text="login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textSize="20sp"
-        android:gravity="center" />
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BEBEBE">
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:layout_marginLeft="5pt"
+        android:layout_marginRight="5pt"
+        android:layout_marginBottom="10pt"
+        android:layout_marginTop="50pt"
+        android:background="#FFF"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         android:ems="10"
-        android:id="@+id/editText" />
-
-    <TextView
-        android:text="password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textSize="20sp"
-        android:gravity="center" />
+        android:id="@+id/login" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:layout_marginBottom="5pt"
+        android:layout_marginLeft="5pt"
+        android:layout_marginRight="5pt"
+        android:background="#FFF"
+        android:hint="Password"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2" />
+        android:id="@+id/password" />
 
     <TextView
-        android:text="Sign in"
+        android:text="Create account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:layout_marginBottom="5pt"
+        android:layout_marginLeft="5pt"
+        android:layout_marginRight="5pt"
+        android:id="@+id/registerText"
         android:gravity="center"
         android:textSize="20sp" />
 
     <Button
         android:text="Log in"
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:layout_marginTop="10pt"
+        android:id="@+id/loginButton" />
 </LinearLayout>

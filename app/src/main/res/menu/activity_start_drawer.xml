@@ -4,12 +4,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="?attr/homeAsUpIndicator"
             android:title="Home" />
         <item
             android:id="@+id/nav_log_in"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@android:drawable/ic_partial_secure"
             android:title="Log in" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="?android:attr/actionModePasteDrawable"
+            android:title="Orders" />
+        <item
+            android:id="@+id/nav_date"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Date" />
+        <!--<item-->
+            <!--android:id="@+id/nav_settings"-->
+            <!--android:icon="?android:attr/actionModePasteDrawable"-->
+            <!--android:title="Orders" />-->
 
     </group>
 

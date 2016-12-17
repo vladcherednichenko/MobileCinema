@@ -11,21 +11,26 @@ import android.widget.TextView;
 import com.androidbuts.jsonparsing.R;
 import com.androidbuts.jsonparsing.model.Film;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CinemaAdapter extends ArrayAdapter<Film> {
 
     List<Film> filmSessionList;
+    List<String> cinemas;
     Context context;
     private LayoutInflater mInflater;
 
     // Constructors
-    public CinemaAdapter(Context context, List<Film> objects) {
+    public CinemaAdapter(Context context, ArrayList<Film> objects) {
+    //public CinemaAdapter(Context context, ArrayList<Cinema> objects) {
         super(context, 0, objects);
         this.context = context;
         this.mInflater = LayoutInflater.from(context);
         filmSessionList = objects;
+        //setCinemaList();
     }
+
 
     @Override
     public Film getItem(int position) {
@@ -47,7 +52,8 @@ public class CinemaAdapter extends ArrayAdapter<Film> {
 
 
         //item.setName("item");
-        vh.textViewName.setText(item.getFilmName());
+        vh.textViewName.setText(item.getCinemaName());
+        //vh.textViewName.setText(item.getFilmName());
         //vh.textViewEmail.setText(item.getEmail());
         //Picasso.with(context).load(item.getProfilePic()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(vh.imageView);
 
