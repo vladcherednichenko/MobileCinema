@@ -1,3 +1,3 @@
-# JSONParsingUsingOkHTTP
-Demo for JSON Parsing using okHttp Library
+# MobileCinema
+Application for ordering tickets to the cinema
 
